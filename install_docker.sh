@@ -33,7 +33,7 @@ else
 fi
 
 # Docker Compose
-if ! command -v docker > /dev/null; then
+if ! command -v docker-compose > /dev/null; then
     printf "${CLEAR_LINE}[2/6]🔎   Checking for docker compose installation"
     sudo wget --output-document=/usr/local/bin/docker-compose "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)"
     sudo chmod +x /usr/local/bin/docker-compose
