@@ -17,9 +17,4 @@ EOF
 sudo docker login -u client -p 4xYkVIAH8kdAH7mP/9BBhbb2ByzLGm4F utmstack.azurecr.io
 sudo chmod 777 -R /usr/share/crondata/
 sudo docker-compose -f /usr/share/crondata/container/docker-compose.yml --env-file /usr/share/crondata/env.yml -p crondata up --detach
-#sudo apt-get install openjdk-8-jre
-#sudo mkdir -p usr/share/crondata/app/
-#sudo wget --output-document=/usr/shared/crondata/app "https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose"
-#sudo chmod 777 /usr/shared/crondata/app/crondata.war
-#sudo cp ./crondata.service  /etc/systemd/system
-#sudo systemctl enable crondata.service
+printf "${CLEAR_LINE}[2/6]🎉${GREEN}   Enviroment is ready!${NO_COLOR}\n"
