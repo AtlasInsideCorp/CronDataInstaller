@@ -7,7 +7,7 @@ NO_COLOR='\033[0m'
 CLEAR_LINE='\r\033[K'
 
 set -e
-/bin/bash ./git_clone.sh
+/bin/bash ./bin/git_clone.sh
 
 printf "${CLEAR_LINE}[5/6]⏳   Setup enviroment, this can take a while, please wait"
 cat <<EOF > /usr/share/crondata/env.yml
