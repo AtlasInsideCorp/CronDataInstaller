@@ -10,7 +10,7 @@ set -e
 /bin/bash ./bin/git_clone.sh
 
 printf "${CLEAR_LINE}[5/6]⏳   Setup enviroment, this can take a while, please wait"
-suco cat > /usr/share/crondata/enviroment.env << EOF
+sudo cat > /usr/share/crondata/enviroment.env << EOF
 HOSTNAME=$HOSTNAME
 BD_PASS=CronData2021..
 EOF
