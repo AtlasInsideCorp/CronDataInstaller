@@ -11,6 +11,7 @@ CLEAR_LINE='\r\033[K'
 CLEAR_LINE='\r\033[K'
 
 printf "${CLEAR_LINE}[4/6]⏳   Cloning repo"
+if [ -d /usr/share/crondata ]; then rm -Rf /usr/share/crondata; fi
 sudo mkdir -m777 -p -v /usr/share/crondata/container
 git clone  https://github.com/jdieguezbean/CronDataContainer.git /usr/share/crondata/container
 printf "${CLEAR_LINE}[4/6]🎉${GREEN}   Container installed successfully!${NO_COLOR}\n"
