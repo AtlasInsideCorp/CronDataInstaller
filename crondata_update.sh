@@ -1,6 +1,5 @@
 
 printf "${CLEAR_LINE}[Initializing]🎉${GREEN}   Updating curren installation of CronData Installer, please wait while we do all for you!${NO_COLOR}\n"
-git restore .
 git pull
 sudo chmod a+x -R .
 sudo rm -R /usr/share/crondata/
