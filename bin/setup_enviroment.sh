@@ -12,7 +12,7 @@ set -e
 printf "${CLEAR_LINE}[5/6]⏳   Setup enviroment, this can take a while, please wait"
 ip=$(hostname -I | awk '{print $1}')
 pass="CronData2021.."
-sudo cat > /usr/share/crondata/enviroment.env << EOF
+sudo cat > /usr/share/crondata/container/.env << EOF
 HOSTNAME=$ip
 BD_PASS=$pass
 EOF
@@ -23,5 +23,5 @@ sudo chmod 777 -R /usr/share/crondata/
 printf "${CLEAR_LINE}[5/6]🎉${GREEN}   Enviroment setup created!${NO_COLOR}\n"
 
 printf "${CLEAR_LINE}[6/6]⏳   Starting Crondata"
-sudo docker-compose -f /usr/share/crondata/container/docker-compose.yml --env-file /usr/share/crondata/enviroment.env -p crondata up --detach
+sudo docker-compose -f /usr/share/crondata/container/docker-compose.yml --env-file /usr/share/crondata/container/.env -p crondata up --detach
 printf "${CLEAR_LINE}[6/6]🎉${GREEN}   Crondata is ready!${NO_COLOR}\n"
