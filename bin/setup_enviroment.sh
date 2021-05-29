@@ -11,10 +11,13 @@ set -e
 
 printf "${CLEAR_LINE}[5/6]⏳   Setup enviroment, this can take a while, please wait"
 ip=$(hostname -I | awk '{print $1}')
+pass="CronData2021.."
 sudo cat > /usr/share/crondata/enviroment.env << EOF
 HOSTNAME=$ip
-BD_PASS="CronData2021.."
+BD_PASS=$pass
 EOF
+sleep 10s
+
 sudo docker login -u client -p 4xYkVIAH8kdAH7mP/9BBhbb2ByzLGm4F utmstack.azurecr.io
 sudo chmod 777 -R /usr/share/crondata/
 printf "${CLEAR_LINE}[5/6]🎉${GREEN}   Enviroment setup created!${NO_COLOR}\n"
