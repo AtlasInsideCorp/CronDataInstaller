@@ -19,6 +19,11 @@ EOF
 sleep 10s
 
 sudo docker login -u client -p 4xYkVIAH8kdAH7mP/9BBhbb2ByzLGm4F utmstack.azurecr.io
+
+printf "${CLEAR_LINE}[5/6]⏳   Downloading CRONDATA images"
+/bin/bash ./bin/crondata_images.sh
+printf "${CLEAR_LINE}[6/6]🎉${GREEN}   CRONDATA image dowbloaded successfully!${NO_COLOR}\n"
+
 sudo chmod 777 -R /usr/share/crondata/
 printf "${CLEAR_LINE}[5/6]🎉${GREEN}   Enviroment setup created!${NO_COLOR}\n"
 
