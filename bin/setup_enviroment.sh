@@ -11,7 +11,6 @@ set -e
 
 printf "${CLEAR_LINE}[5/6]⏳   Setup enviroment, this can take a while, please wait"
 
-
 printf "${CLEAR_LINE}[5/6]⏳   Setup CRONDATA enviroment"
 /bin/bash ./bin/write_env.sh
 printf "${CLEAR_LINE}[5/6]🎉${GREEN}   Crondata is ready!${NO_COLOR}\n"
@@ -22,7 +21,3 @@ printf "${CLEAR_LINE}[6/6]🎉${GREEN}   CRONDATA image dowbloaded successfully!
 
 sudo chmod 777 -R /usr/share/crondata/
 printf "${CLEAR_LINE}[6/6]🎉${GREEN}   Enviroment setup created!${NO_COLOR}\n"
-
-printf "${CLEAR_LINE}[6/6]⏳   Starting Crondata"
-/bin/bash ./bin/start.sh
-printf "${CLEAR_LINE}[6/6]🎉${GREEN}   Crondata is ready!${NO_COLOR}\n"

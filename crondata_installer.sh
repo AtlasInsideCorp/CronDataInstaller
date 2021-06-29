@@ -15,6 +15,8 @@ printf "${CLEAR_LINE}[Initializing]🎉${GREEN}   Welcome to CronData Installer,
 
 /bin/bash ./bin/setup_enviroment.sh
 
+printf "${CLEAR_LINE}[6/6]⏳   Starting CRONDATA"
+
 /bin/bash ./bin/start.sh
 
 printf "${CLEAR_LINE}[DONE]🎉${GREEN}   CronData is ready to use, access to browser: $HOSTNAME!${NO_COLOR}\n"
