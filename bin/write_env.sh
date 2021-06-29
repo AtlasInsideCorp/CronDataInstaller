@@ -12,6 +12,10 @@ HOSTNAME=$ip
 DOMAIN=$domain
 BD_PASS=$passvar
 EOF
-sleep 10s
-
-echo Thankyou $uservar we now have your login details
+sudo echo "$ip crondata.$domain" >> /etc/hosts
+sudo echo "$ip traefik.$domain" >> /etc/hosts
+sudo echo "$ip grafana.$domain" >> /etc/hosts
+sudo echo "$ip prometheus.$domain" >> /etc/hosts
+sudo echo "$ip alertmanager.$domain" >> /etc/hosts
+sudo echo "$ip filebrowser.$domain" >> /etc/hosts
+sleep 5s
