@@ -6,6 +6,11 @@ printf "${CLEAR_LINE}[Initializing]${GREEN}   Welcome to CronData Installer, ple
 read -p 'Domain: ' domain
 read -p 'Password: ' passvar
 
+if [ ! "$domain" ] || [ ! "$passvar" ]; then
+  echo "arguments must be provided"
+  exit 1
+fi
+
 ip=$(hostname -I | awk '{print $1}')
 sudo cat > /usr/share/crondata/container/.env << EOF
 HOSTNAME=$ip
@@ -18,4 +23,3 @@ sudo echo "$ip grafana.$domain" >> /etc/hosts
 sudo echo "$ip prometheus.$domain" >> /etc/hosts
 sudo echo "$ip alertmanager.$domain" >> /etc/hosts
 sudo echo "$ip filebrowser.$domain" >> /etc/hosts
-sleep 5s
