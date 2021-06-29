@@ -3,8 +3,8 @@
 CLEAR_LINE='\r\033[K'
 
 printf "${CLEAR_LINE}[Initializing]${GREEN}   Welcome to CronData Installer, please wait while we do all for you!${NO_COLOR}\n"
-read -p -r -d 'Domain: ' domain
-read -p -r -d 'Password: ' passvar
+read -p 'Domain: ' domain
+read -p 'Password: ' passvar
 
 ip=$(hostname -I | awk '{print $1}')
 sudo cat > /usr/share/crondata/container/.env << EOF
