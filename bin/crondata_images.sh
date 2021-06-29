@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+sudo docker login -u client -p 4xYkVIAH8kdAH7mP/9BBhbb2ByzLGm4F utmstack.azurecr.io
 
 docker pull utmstack.azurecr.io/crondata-panel:latest
 
