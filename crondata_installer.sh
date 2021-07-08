@@ -19,6 +19,6 @@ printf "${CLEAR_LINE}[6/6]⏳   Starting CronData, please wait..."
 
 /bin/bash ./bin/start.sh
 
-while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' http://localhost/crondata/api/targets)" != "200" ]]; do sleep 10; done
+while [ "$(curl -s -o /dev/null -w ''%{http_code}'' http://localhost/crondata/api/targets)" != "200" ]; do sleep 10; done
 
 printf "${CLEAR_LINE}[DONE]🎉${GREEN}   CronData is ready to use, access to browser in $HOSTNAME!${NO_COLOR}\n"
