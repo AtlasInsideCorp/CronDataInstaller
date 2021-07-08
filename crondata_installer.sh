@@ -9,14 +9,18 @@ printf "${CLEAR_LINE}[Initializing]🎉${GREEN}   Welcome to CronData Installer,
 
 /bin/bash ./bin/checks.sh
 
+/bin/bash ./bin/write_env.sh
+
 /bin/bash ./bin/install_docker.sh
 
 /bin/bash ./bin/install_git.sh
 
 /bin/bash ./bin/setup_enviroment.sh
 
-printf "${CLEAR_LINE}[6/6]⏳   Starting CRONDATA"
+printf "${CLEAR_LINE}[6/6]⏳   Starting CronData, please wait..."
 
 /bin/bash ./bin/start.sh
 
-printf "${CLEAR_LINE}[DONE]🎉${GREEN}   CronData is ready to use, access to browser: $HOSTNAME!${NO_COLOR}\n"
+while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' http://localhost/crondata/api/targets)" != "200" ]]; do sleep 10; done
+
+printf "${CLEAR_LINE}[DONE]🎉${GREEN}   CronData is ready to use, access to browser in $HOSTNAME!${NO_COLOR}\n"

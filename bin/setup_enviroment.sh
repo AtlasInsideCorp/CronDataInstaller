@@ -11,10 +11,6 @@ set -e
 
 printf "${CLEAR_LINE}[5/6]⏳   Setup enviroment, this can take a while, please wait"
 
-printf "${CLEAR_LINE}[5/6]⏳   Setup CRONDATA enviroment"
-/bin/bash ./bin/write_env.sh
-printf "${CLEAR_LINE}[5/6]🎉${GREEN}   Crondata is ready!${NO_COLOR}\n"
-
 printf "${CLEAR_LINE}[6/6]⏳   Downloading CRONDATA images"
 /bin/bash ./bin/crondata_images.sh
 printf "${CLEAR_LINE}[6/6]🎉${GREEN}   CRONDATA image dowbloaded successfully!${NO_COLOR}\n"
