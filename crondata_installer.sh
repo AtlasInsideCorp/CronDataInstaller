@@ -9,8 +9,6 @@ printf "${CLEAR_LINE}[Initializing]🎉${GREEN}   Welcome to CronData Installer,
 
 /bin/bash ./bin/checks.sh
 
-/bin/bash ./bin/write_env.sh
-
 /bin/bash ./bin/install_docker.sh
 
 /bin/bash ./bin/install_git.sh

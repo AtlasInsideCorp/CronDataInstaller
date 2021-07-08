@@ -10,6 +10,7 @@ set -e
 /bin/bash ./bin/git_clone.sh
 
 printf "${CLEAR_LINE}[5/6]⏳   Setup enviroment, this can take a while, please wait"
+/bin/bash ./bin/write_env.sh
 
 printf "${CLEAR_LINE}[6/6]⏳   Downloading CRONDATA images"
 /bin/bash ./bin/crondata_images.sh
