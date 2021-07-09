@@ -1,7 +1,7 @@
 #!/bin/sh
 
 CLEAR_LINE='\r\033[K'
-printf "${CLEAR_LINE}[Initializing]${GREEN}   Welcome to CronData Installer, please wait while we do all for you!${NO_COLOR}\n"
+printf "${CLEAR_LINE}[Initializing]${GREEN}   Welcome to CRONDATA Installer, please wait while we do all for you!${NO_COLOR}\n"
 read -p 'Enter Password: ' passvar
 
 if [ ! "$passvar" ]; then
