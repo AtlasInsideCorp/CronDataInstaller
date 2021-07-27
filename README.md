@@ -13,7 +13,8 @@ This installation guide provides instructions to perform the CRONDATA installati
 ### Preparing for installation
 - Update packages list: apt update
 - Install WGET and NET-TOOLS: apt install wget net-tools
-- Download the latest version from https://github.com/AtlasInsideCorp/CronDataInstaller (You can use `# wget [URL]` to download the installer directly to the server)
+- Download the latest version from https://github.com/AtlasInsideCorp/CronDataInstaller/releases/download/v1.0.0/CronDataInstaller.zip (You can use `# wget [URL]` to download the installer directly to the server)
+- Unzip CronDataInstaller.zip
 - Set execution permissions with `#cd CronDataInstaller && sudo chmod -R +x .`
 - Execute installer `./crondata_installer.sh`
 - Once the installation process is finished you can access the panel with the credentials-> username: `admin`, password:` password`
