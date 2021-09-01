@@ -20,6 +20,9 @@ printf "${CLEAR_LINE}[6/6]⏳ Starting CRONDATA, please wait..."
 /bin/bash ./bin/start.sh
 
 printf "${CLEAR_LINE}[6/6]⏳ Crondata services have been started; please wait for the panel to be accessible, this may take a few minutes"
-while [ "$(curl -s -o /dev/null -w ''%{http_code}'' http://localhost/crondata/api/targets)" != "200" ]; do sleep 10; done
+while [ "$(curl -s -o /dev/null -w ''%{http_code}'' http://localhost:8080/api/ping)" != "200" ]; do
+ sleep 10; 
+ printf "${CLEAR_LINE} Checking for panel..." 
+done
 
 printf "${CLEAR_LINE}[DONE]🎉${GREEN}   CRONDATA is ready to use, access to browser in ${HOSTNAME}!${NO_COLOR}\n"
